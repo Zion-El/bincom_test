@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BINCOM TEST</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+    <form>
+        <input type="text" name="" id="" placeholder="what polling unit do you wish to">
+        <div class="result">
+            <py-script>
+                import sqlite3
+                db = sqlite3.connect("bincom_test.sql")
+                cursor = db.cursor()
+                cursor.execute("SELECT * FROM announced_pu_results")
+                result = cursor.fetchone()
+                print(result)
+                function readResult():
+
+            </py-script>
+        </div>
+    </form>
+
+</body>
+</html>
